@@ -12,11 +12,11 @@ let viewModel = function (){
    this.currentCat = ko.observable(new Cat())
     // let v = 0
     this.incrementCount = function(){
-        this.currentCat().clickCount(this.currentCat().clickCount() + 1);
+        this.clickCount(this.clickCount() + 1);
         // console.log(this.clickCount());
-        if(this.currentCat().clickCount() > 10){
+        if(this.clickCount() > 10){
             this.level("Teen");
-        }if(this.currentCat().clickCount() > 20){
+        }if(this.clickCount() > 20){
             this.level("Older Teen")
         }
     }
